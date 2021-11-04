@@ -1,23 +1,21 @@
-// * GLOBAL VARIABLES
-
 // * CANVAS SETUP
 let canvas = document.querySelector("#my-canvas");
 let ctx = canvas.getContext("2d");
 
+// * GLOBAL VARIABLES
 let game;
 
-// let canvas = document.querySelector("#my-canvas");
-
 // * DOM ELEMENTS
-
+//
 let startScreen = document.querySelector("#start-screen");
 let gameScreen = document.querySelector("#the-game-screen");
 let startBtn = document.querySelector(".game-btn");
 let walletMoney = document.querySelector(".btn-and-wallet > p");
 let studingEuro = document.querySelector("#firstEuro-btn");
 let theProgram = document.querySelector("#autocliker");
-let youtubeBtn = document.querySelector(".youtube-btn");
-let coffeeBtn = document.querySelector(".coffee-btn");
+//
+let btnYoutube = document.querySelector(".youtube-btn");
+let btnCoffee = document.querySelector(".coffee-btn");
 let btnIronhacker = document.querySelector(".ironhack-btn");
 let btnPsychology = document.querySelector(".psycho-btn");
 let btnFrontDev = document.querySelector(".front-end-btn");
@@ -25,11 +23,20 @@ let btnBackDev = document.querySelector(".back-end-btn");
 let btnFullStack = document.querySelector(".full-stack-btn");
 let btnDreamJob = document.querySelector(".dream-job-btn");
 let btnCrypto = document.querySelector(".crypto-btn");
+//
+let costYoutube = document.querySelector("#youtube > span");
+let costCoffee = document.querySelector("#coffee > span");
+let costIronhack = document.querySelector("#ironhack > span");
+let costPsychology = document.querySelector("#psycho > span");
+let costFrontDev = document.querySelector("#front-dev > span");
+let costBackDev = document.querySelector("#back-dev > span");
+let costFullStack = document.querySelector("#full-stack > span");
+let costDreamJob = document.querySelector("#dream-job > span");
+let costCrypto = document.querySelector("#crypto > span");
 
 // * FUNCTIONS
 
 gameLoop = () => {
-  console.log("loop");
   ctx.clearRect(0, 0, canvas.width, canvas.height);
 
   ctx.drawImage(this.bg, 0, 0, canvas.width, canvas.height);
@@ -43,7 +50,6 @@ const startGame = () => {
   canvas.style.display = "flex";
   // show the buttons Again
   gameScreen.style.display = "block";
-
   // hide the start screen
   startScreen.style.display = "none";
 
@@ -56,36 +62,33 @@ const startGame = () => {
   canvas.addEventListener("click", game.addOneEuro);
   theProgram.addEventListener("click", game.buyFirstProgram);
 
-  youtubeBtn.addEventListener("click", function () {
-    game.buyClicks("youtube", youtubeBtn);
+  btnYoutube.addEventListener("click", function () {
+    game.buyClicks("youtube", btnYoutube, costYoutube);
   });
-  coffeeBtn.addEventListener("click", function () {
-    game.buyClicks("coffee", coffeeBtn);
+  btnCoffee.addEventListener("click", function () {
+    game.buyClicks("coffee", btnCoffee, costCoffee);
   });
   btnIronhacker.addEventListener("click", function () {
-    game.buyClicks("ironhack", btnIronhacker);
+    game.buyClicks("ironhack", btnIronhacker, costIronhack);
   });
   btnPsychology.addEventListener("click", function () {
-    game.buyClicks("psychology", btnPsychology);
+    game.buyClicks("psychology", btnPsychology, costPsychology);
   });
   btnFrontDev.addEventListener("click", function () {
-    game.buyClicks("frontEnd", btnFrontDev);
+    game.buyClicks("frontEnd", btnFrontDev, costFrontDev);
   });
   btnBackDev.addEventListener("click", function () {
-    game.buyClicks("backEnd", btnBackDev);
+    game.buyClicks("backEnd", btnBackDev, costBackDev);
   });
   btnFullStack.addEventListener("click", function () {
-    game.buyClicks("fullStack", btnFullStack);
+    game.buyClicks("fullStack", btnFullStack, costFullStack);
   });
   btnDreamJob.addEventListener("click", function () {
-    game.buyClicks("dreamJob", btnDreamJob);
+    game.buyClicks("dreamJob", btnDreamJob, costDreamJob);
   });
   btnCrypto.addEventListener("click", function () {
-    game.buyClicks("crypto", btnCrypto);
+    game.buyClicks("crypto", btnCrypto, costCrypto);
   });
 };
 
 startBtn.addEventListener("click", startGame);
-
-// let game2 = new Game();
-// game2.gameLoop();

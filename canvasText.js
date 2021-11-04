@@ -1,3 +1,11 @@
+function ironHacker(please, help) {
+  let clickForMoney = please + help;
+
+  return clickForMoney;
+}
+
+ironHacker();
+
 class Text {
   constructor(xPos, yPos, text, font, color) {
     this.xPos = xPos;

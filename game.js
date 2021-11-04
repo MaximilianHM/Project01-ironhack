@@ -2,8 +2,8 @@ class Game {
   constructor() {
     // ctx = canvas.getContext("2d");
     this.bg = new Image();
-    this.bg.src = "./images/bg-test.png";
-    this.initialEuros = 0; // must se by 0
+    this.bg.src = "./images/bg-canvas1.png";
+    this.initialEuros = 1000000000; // must se by 0
     this.programCost = 10;
 
     this.costs = {
@@ -53,12 +53,10 @@ class Game {
   };
 
   addOneEuro = () => {
-    console.log("clicking");
     this.initialEuros = this.initialEuros + 1;
     walletMoney.innerText = `My wallet: ${Number(this.initialEuros)}€`;
   };
 
-  // Developing your first web page
   buyFirstProgram = () => {
     if (this.initialEuros >= this.programCost) {
       this.initialEuros = this.initialEuros - this.programCost;
@@ -73,43 +71,27 @@ class Game {
   };
 
   // ! SOLVE THE BTNDOM ISSUE
-  buyClicks(buttonName, DOMText) {
-    console.log("this.initialEuros", this.initialEuros);
-
+  buyClicks(buttonName, maxLvlDisplay, DOMCost) {
     let multiplier = this.multipliers[buttonName];
     let cost = this.costs[buttonName];
     let lvl = this.levels[buttonName];
-
-    // console.log("multiplier", multiplier);
-    // console.log("cost", cost);
-    // console.log("lvl", lvl);
     if (lvl < 1) {
       lvl = 1;
     }
 
     if (this.initialEuros >= cost * lvl) {
-      // count clicks
-      // if ai have euros > cost * lvl
       this.levels[buttonName] = lvl + 1;
-      console.log(this.levels[buttonName]);
-      // increase cost per clicks
-      let clickValue = this.initialEuros - cost * (lvl - 1);
-      console.log("lvl:", lvl);
-      console.log("click value: ", clickValue);
-
-      // console.log("click reward: ", clickReward);
-
+      let clickValue = cost * lvl;
+      this.initialEuros - clickValue;
       this.initialEuros = this.initialEuros - clickValue;
 
-      // refresh the wallet after first click
       walletMoney.innerText = `My wallet: ${Number(this.initialEuros)}€`;
-      //
-      // set a max number of buy button
-      if (lvl === 1) {
-        DOMText.innerHTML = `
-          <button type="button" disabled>
-            You reach ${lvl} is the Max level
-          </button>
+
+      DOMCost.innerText = ` - Cost ${clickValue}€ - LVL${lvl}`;
+
+      if (lvl === 10) {
+        maxLvlDisplay.innerHTML = `
+          <button type="button" disabled><h2 style="font-size:20px">You reach level ${lvl} you got the Max level</h2></button>
         `;
       }
       // autocliker buy per second
