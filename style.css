@@ -1,0 +1,120 @@
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100;0,400;0,500;0,600;0,700;1,100;1,300&family=Roboto:wght@100;300;500;700&display=swap");
+
+* {
+  font-family: "JetBrains Mono", monospace;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  background-color: #191622;
+  color: #fff;
+}
+
+h1 {
+  margin: 5% 0;
+}
+
+/*  * INITIAL SETUP - change screen */
+#the-game-screen {
+  display: none;
+}
+
+/* *CANVAS SETUP */
+#my-canvas {
+  background-color: lightgrey;
+}
+
+#my-canvas {
+  display: none;
+}
+
+.canvas {
+  padding: 0;
+}
+
+/* * START SCREEN */
+#start-screen {
+  padding: 0 15%;
+}
+
+#start-screen p {
+  margin-bottom: 10%;
+}
+
+#start-screen button {
+  padding: 10px 20px;
+  font-size: 1.5em;
+  font-weight: 600;
+}
+
+/*  * GAME SCREEN */
+
+#canvas-and-btn {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+#right-container {
+  text-align: left;
+}
+
+.left-painel-btn > ul {
+  list-style: none;
+  margin-top: 0;
+  padding: 0;
+}
+
+.right-painel-btn > ul {
+  list-style: none;
+  margin-top: 0;
+  padding: 0;
+}
+
+#canvas-and-btn {
+  display: flex;
+  flex-direction: row;
+}
+
+#canvas-and-btn button {
+  width: 200px;
+  height: 50px;
+  margin-bottom: 5%;
+}
+
+#canvas-and-btn button:hover {
+}
+
+/* * GAME BUTTON STYLES  */
+
+#canvas-and-btn img {
+  height: 2em;
+}
+
+.btn-flex button {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* background-color: ; */
+}
+.btn-flex img {
+  padding: 0 1%;
+}
+
+/* * BOTTOM GAME SCREEN  */
+
+.btn-and-wallet button {
+  margin-top: 20px;
+  width: 40%;
+  height: 70px;
+}
+
+.btn-and-wallet img {
+  height: 2em;
+}

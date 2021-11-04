@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dev life</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- * START GAME SCREEN -->
+    <div id="start-screen">
+      <h1>Dev life</h1>
+      <p>
+        Apos uma crise de saude global, juntamente com o crescimento exponencial
+        da tecnologia. Voce decidiu por si a explorar o mundo da programacao,
+        tudo comecou com voce a estudar, a ler artigos e a pesquisar sozinho.
+        Ate que voce foi contaminado pelo "virus" da tecnologia e resolveu se
+        tornar um(a) dev, mas percebeu que nao seria tao facil quanto imaginava.
+        Sera que voce alcancara o sucesso que te espera?
+      </p>
+      <button class="game-btn">Start the journey</button>
+    </div>
+
+    <!-- * GAME SCREEN -->
+    <div id="the-game-screen">
+      <div>
+        <h1>Dev life</h1>
+      </div>
+
+      <div id="canvas-and-btn">
+        <div class="left-painel-btn">
+          <ul>
+            <li class="first-program-btn btn-flex">
+              <button id="autocliker">
+                Developing your first web page
+                <img
+                  src="./images/firstprogram-logo.png"
+                  alt="first program logo"
+                  srcset=""
+                />
+              </button>
+            </li>
+            <li class="youtube-btn btn-flex">
+              <button id="youtube">
+                Confusing YouTube tutorials - Cost 20€
+                <img
+                  src="./images/youtubel-logo.png"
+                  alt="youtube logo image"
+                />
+              </button>
+            </li>
+            <li class="coffee-btn btn-flex">
+              <button id="coffee">
+                Buckets of coffee - Cost 200€
+                <img
+                  src="./images/coffee.png"
+                  alt="coffee logo image"
+                  srcset=""
+                />
+              </button>
+            </li>
+            <li class="ironhack-btn btn-flex">
+              <button id="ironhack">
+                Choosing the IronHack lifestyle - Cost 300€
+                <img
+                  src="./images/ironhack-logo2.png"
+                  alt="ironhack logo image"
+                  srcset=""
+                />
+              </button>
+            </li>
+            <li class="psycho-btn btn-flex">
+              <button id="psycho">
+                Maybe a psychologist Assistance? - Cost 400€
+                <img
+                  src="./images/psychologist.png"
+                  alt="psychologist logo"
+                  srcset=""
+                />
+              </button>
+            </li>
+          </ul>
+        </div>
+
+        <!-- * CANVAS GAME SCREEN -->
+        <div class="canvas">
+          <canvas id="my-canvas" width="400" height="300"></canvas>
+        </div>
+
+        <div class="right-painel-btn">
+          <ul>
+            <li class="front-end-btn btn-flex">
+              <button id="front-dev">
+                <img
+                  src="./images/frontend-logo.png"
+                  alt="frontend logo image"
+                  srcset=""
+                />
+                Becoming a Front-end Developer - Cost 500€
+              </button>
+            </li>
+            <li class="back-end-btn btn-flex">
+              <button id="back-dev">
+                <img
+                  src="./images/backend-logo.png"
+                  alt="backend logo image"
+                  srcset=""
+                />
+                Now you are a Back-end Dev - Cost 600€
+              </button>
+            </li>
+            <li class="full-stack-btn btn-flex">
+              <button id="full-stack">
+                <img
+                  src="./images/fullstack-logo.png"
+                  alt="fullstack logo image"
+                  srcset=""
+                />
+                Finally a Full Stack Dev - Cost 700€
+              </button>
+            </li>
+            <li class="dream-job-btn btn-flex">
+              <button id="dream-job">
+                <img
+                  src="./images/dreamjob-logo.png"
+                  alt="dream job logo image"
+                  srcset=""
+                />
+                Finding the Dream job - Cost 900€
+              </button>
+            </li>
+            <li class="crypto-btn btn-flex">
+              <button id="crypto">
+                <img
+                  src="./images/crypto-logo.png"
+                  alt="crypto logo image"
+                  srcset=""
+                />
+                Create your own crypto coin - Cost 1000€
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="btn-and-wallet">
+        <p>My wallet: 0 €</p>
+        <!-- <button id="firstEuro-btn">
+          <img
+            src="./images/studing-logo.png"
+            alt="study by yourself logo image"
+            srcset=""
+          />
+          <p>Studing by yourself</p>
+        </button> -->
+      </div>
+    </div>
+
+    <script src="./game.js"></script>
+    <script src="./main.js"></script>
+    <script src="canvasText.js"></script>
+  </body>
+</html>
