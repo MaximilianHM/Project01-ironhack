@@ -3,7 +3,7 @@ class Game {
     // ctx = canvas.getContext("2d");
     this.bg = new Image();
     this.bg.src = "./images/bg-canvas1.png";
-    this.initialEuros = 1000000000; // must se by 0
+    this.initialEuros = 0; // must se by 0
     this.programCost = 10;
 
     this.costs = {
