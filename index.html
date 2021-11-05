@@ -21,15 +21,38 @@
         waiting for you?
       </p>
       <button class="game-btn">
-        <span>&lt;button&gt;</span> Start the journey
-        <span>&lt;/button&gt;</span>
+        &lt;<span>button</span>&gt; Start the journey
+        &lt;/<span>button</span>&gt;
       </button>
+    </div>
+
+    <!-- * INSTRUCTION SCREEN  -->
+    <div id="instruction">
+      <h1>Dev life</h1>
+      <div id="step-instruction">
+        <div class="arrow-instruction">
+          <p>
+            Maybe is not so easy, now you have to try by yourself, so lets call
+            the function, you just have to click the image
+          </p>
+          <img src="./images/arrow.png" alt="arrow image" srcset="" />
+        </div>
+        <div class="instruction-img">
+          <button class="instrution-btn game-btn">
+            &lt;<span>button</span>&gt; GOT IT &lt;/<span>button</span>&gt;
+          </button>
+          <img src="./images/bg-canvas1.png" alt="" srcset="" />
+        </div>
+      </div>
     </div>
 
     <!-- * GAME SCREEN -->
     <div id="the-game-screen">
       <div>
         <h1>Dev life</h1>
+        <div class="btn-and-wallet">
+          <p>My wallet: 0 €</p>
+        </div>
       </div>
 
       <div id="canvas-and-btn">
@@ -37,7 +60,7 @@
           <ul>
             <li class="first-program-btn btn-flex">
               <button id="autocliker">
-                Developing your first web page
+                Developing your first web page - Cost 10€
                 <img
                   src="./images/firstprogram-logo.png"
                   alt="first program logo"
@@ -93,7 +116,7 @@
 
         <!-- * CANVAS GAME SCREEN -->
         <div class="canvas">
-          <canvas id="my-canvas" width="800" height="550"></canvas>
+          <canvas id="my-canvas" width="860" height="620"></canvas>
         </div>
 
         <div class="right-painel-btn">
@@ -156,13 +179,9 @@
           </ul>
         </div>
       </div>
-      <div class="btn-and-wallet">
-        <p>My wallet: 0 €</p>
-      </div>
     </div>
 
     <script src="./game.js"></script>
     <script src="./main.js"></script>
-    <script src="canvasText.js"></script>
   </body>
 </html>

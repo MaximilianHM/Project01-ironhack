@@ -8,12 +8,14 @@ let game;
 // * DOM ELEMENTS
 //
 let startScreen = document.querySelector("#start-screen");
+let instructionScreen = document.querySelector("#instruction");
 let gameScreen = document.querySelector("#the-game-screen");
 let startBtn = document.querySelector(".game-btn");
+let instructionBtn = document.querySelector(".instruction-img > button");
 let walletMoney = document.querySelector(".btn-and-wallet > p");
 let studingEuro = document.querySelector("#firstEuro-btn");
 let theProgram = document.querySelector("#autocliker");
-//
+console.log(theProgram);
 let btnYoutube = document.querySelector(".youtube-btn");
 let btnCoffee = document.querySelector(".coffee-btn");
 let btnIronhacker = document.querySelector(".ironhack-btn");
@@ -44,14 +46,18 @@ gameLoop = () => {
   requestAnimationFrame(this.gameLoop);
 };
 
-// activating the the game screen
 const startGame = () => {
-  // show the canvas screen
   canvas.style.display = "flex";
-  // show the buttons Again
   gameScreen.style.display = "block";
-  // hide the start screen
   startScreen.style.display = "none";
+  instructionScreen.style.display = "none";
+};
+
+const gameInstruction = () => {
+  canvas.style.display = "none";
+  gameScreen.style.display = "none";
+  startScreen.style.display = "none";
+  instructionScreen.style.display = "flex";
 
   // * START THE GAME
   game = new Game();
@@ -91,4 +97,5 @@ const startGame = () => {
   });
 };
 
-startBtn.addEventListener("click", startGame);
+startBtn.addEventListener("click", gameInstruction);
+instructionBtn.addEventListener("click", startGame);
