@@ -1,9 +1,8 @@
 class Game {
   constructor() {
-    // ctx = canvas.getContext("2d");
     this.bg = new Image();
     this.bg.src = "./images/bg-canvas1.png";
-    this.initialEuros = 0; // must by 0
+    this.initialEuros = 0;
     this.programCost = 10;
 
     this.costs = {
@@ -19,7 +18,6 @@ class Game {
     };
 
     this.levels = {
-      // set the value of clicks
       youtube: 0,
       coffee: 0,
       ironhack: 0,
